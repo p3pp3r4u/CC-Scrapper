@@ -76,7 +76,7 @@ async def scr_cmd(client, message):
         chat = await user.get_chat(channel_username)
         channel_name = chat.title
     except Exception:
-        await message.reply_text("<b>Hey Bro! 🥲 Incorrect username ❌</b>")
+        await message.reply_text("<b> Incorrect username ❌</b>")
         return
     temporary_msg = await message.reply_text("<b>Scraping in progress wait.....</b>")
     scrapped_results = await scrape_messages(user, chat.id, limit, start_number)
@@ -93,14 +93,14 @@ async def scr_cmd(client, message):
                 f"<b>Amount:</b> <code>{len(unique_messages)}</code>\n"
                 f"<b>Duplicates Removed:</b> <code>{duplicates_removed}</code>\n"
                 f"<b>━━━━━━━━━━━━━━━━</b>\n"
-                f"<b>Card-Scrapper By: <a href='https://t.me/itsSmartDev'>Smart Dev</a></b>\n"
+                f"<b>Card-Scrapper By: <a href='https://t.me/evakulos'>Smart Dev</a></b>\n"
             )
             await temporary_msg.delete()
             await client.send_document(message.chat.id, f, caption=caption)
         os.remove(file_name)
     else:
         await temporary_msg.delete()
-        await client.send_message(message.chat.id, "<b>Sorry Bro ❌ No Credit Card Found</b>")
+        await client.send_message(message.chat.id, "<b> ❌ No Credit Card Found</b>")
 
 if __name__ == "__main__":
     user.start()
