@@ -11,5 +11,5 @@ BOT_TOKEN = "6955825725:AAE5Lv1a8MvMcqTM6_9YsNfqP8zJI6uNVEQ"  # Replace this BOT
 ADMIN_IDS = [5886463657, 1446146615]
 
 # Limits
-DEFAULT_LIMIT = 10000 # Card Scrapping Limit For Everyone
-ADMIN_LIMIT = 50000 # Card Scrapping Limit For Admin
+DEFAULT_LIMIT = 5000 # Card Scrapping Limit For Everyone
+ADMIN_LIMIT = 99999 # Card Scrapping Limit For Admin
